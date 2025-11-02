@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 from typing import Optional
+import hashlib
 from jose import JWTError, jwt
-from passlib.context import CryptContext
 from sqlalchemy.orm import Session
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPBearer
@@ -18,16 +18,17 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = os.getenv("ALGORITHM")
 ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", 30))
 
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 security = HTTPBearer()
 
 
 def verify_password(plain_password, hashed_password):
-    return pwd_context.verify(plain_password, hashed_password)
+    """Simple password verification for development"""
+    return hashlib.sha256(plain_password.encode()).hexdigest() == hashed_password
 
 
 def get_password_hash(password):
-    return pwd_context.hash(password)
+    """Simple password hashing for development"""
+    return hashlib.sha256(password.encode()).hexdigest()
 
 
 def get_user(db: Session, username: str):
