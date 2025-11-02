@@ -97,11 +97,11 @@ const Employees: React.FC = () => {
                     <User className="h-5 w-5 text-gray-400 mr-3" />
                     <div>
                       <p className="text-sm font-medium text-gray-900">
-                        {employee.full_name || employee.username}
+                        {employee.name}
                       </p>
                       <div className="flex items-center space-x-4 text-sm text-gray-500">
-                        <span className="capitalize">{employee.role}</span>
-                        <span>{employee.email}</span>
+                        <span className="capitalize">{employee.position}</span>
+                        <span>{employee.phone}</span>
                         <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                           employee.is_active 
                             ? 'bg-green-100 text-green-800' 
