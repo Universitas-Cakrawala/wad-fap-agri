@@ -1,8 +1,25 @@
 # FAP Agri - Farm Management System
 
-Sistem manajemen perkebunan kelapa sawit yang komprehensif untuk FAP Agri, mencakup backend API dengan FastAPI dan frontend dengan React + Tailwind CSS.
+**Sistem manajemen perkebunan kelapa sawit modern dan komprehensif untuk FAP Agri**
 
-## 🌟 Fitur Utama
+FAP Agri adalah platform digital yang dirancang khusus untuk mengelola operasional perkebunan kelapa sawit secara efisien. Sistem ini menggabungkan teknologi web modern dengan kebutuhan spesifik industri palm oil, mulai dari pencatatan panen hingga traceability batch untuk memenuhi standar RSPO.
+
+**Stack Teknologi:**
+- **Backend**: FastAPI (Python) + SQLAlchemy + JWT Authentication
+- **Frontend**: React + TypeScript + Tailwind CSS
+- **Database**: SQLite (development) / PostgreSQL (production)
+- **Deployment**: Docker-ready untuk scalability
+
+## � Keunggulan Aplikasi
+
+✅ **Mudah Digunakan**: Interface intuitif untuk semua level pengguna  
+✅ **Real-time Tracking**: Pencatatan panen dengan GPS coordinates  
+✅ **Batch Traceability**: Pelacakan lot dari kebun hingga pabrik  
+✅ **Role-based Access**: Kontrol akses sesuai jabatan (admin, agronomist, field worker)  
+✅ **Mobile-Friendly**: Responsive design untuk penggunaan di lapangan  
+✅ **API-First**: Arsitektur modular untuk integrasi dengan sistem lain  
+
+## �🌟 Fitur Utama
 
 ### Backend (FastAPI + PostgreSQL)
 - **Authentication & Authorization**: JWT-based auth dengan role-based access control
@@ -102,6 +119,46 @@ Password: admin123
 
 ### Dashboard
 - `GET /api/v1/dashboard/stats` - Get dashboard statistics
+
+## 🔮 Roadmap & Development
+
+### Saat Ini (v1.0) ✅
+- ✅ Manajemen perkebunan dan blok
+- ✅ Pencatatan harvest dengan batch tracking
+- ✅ Dashboard analytics dan reporting
+- ✅ Authentication & user management
+- ✅ Responsive web interface
+
+### Selanjutnya (v2.0) 🔄
+- 📱 Progressive Web App (PWA) untuk offline capability
+- 📊 Advanced analytics dengan visualisasi data
+- 🗂️ File upload untuk dokumentasi kebun
+- 🔔 Notification system untuk alert penting
+- 🗺️ Integrasi mapping dengan Leaflet/OpenStreetMap
+
+### Masa Depan (v3.0+) 🚀
+- 🛰️ IoT sensor integration untuk monitoring real-time
+- 🤖 Machine Learning untuk prediksi yield
+- 📱 Mobile app native (React Native)
+- 🌐 Supply chain integration ke pabrik pengolahan
+- 📋 RSPO certification tracking automation
+
+## 💡 Use Cases
+
+**Untuk Manager Perkebunan:**
+- Monitor performance seluruh area perkebunan
+- Analisis produktivitas per blok dan periode
+- Laporan compliance untuk audit RSPO
+
+**Untuk Mandor/Supervisor:**
+- Input data panen harian dari lapangan
+- Tracking performance tim panen
+- Koordinasi aktivitas di multiple blok
+
+**Untuk Field Worker:**
+- Record harvest dengan smartphone/tablet
+- GPS tagging untuk akurasi lokasi
+- Simple interface untuk input cepat
 
 ## 🔮 Next Steps
 
